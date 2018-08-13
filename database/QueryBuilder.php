@@ -78,4 +78,18 @@ class QueryBuilder
         $query = $this->pdo->prepare("DELETE FROM {$table} WHERE id='{$id}'");
         $query->execute();
     }
+
+    public function addNewBlogPost($table, $payload)
+    {
+        $target_file = "storage/images/" . basename($_FILES['image']['name']);
+        $title = $payload['title'];
+        $text = $payload['text'];
+        $category_id = $payload['category_id'];
+        $user_id = $payload['user_id'];
+        $image = $target_file;
+        move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
+        $sql = "INSERT INTO $table (title, text, image, category_id, user_id) VALUES ( \"$title \", \"$text\", \"/$image\" , \"$category_id\" ,\"$user_id\")";
+        $query = $this->pdo->prepare($sql);
+        ($query->execute($payload));
+    }
 }

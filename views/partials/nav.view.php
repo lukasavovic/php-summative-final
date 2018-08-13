@@ -1,6 +1,6 @@
-<div class="container-fluid nav-header">
-    <h1>Traveling with Passion</h1>
-</div>
+<!--<div class="container-fluid nav-header">-->
+<!--    <h1>Traveling with Passion</h1>-->
+<!--</div>-->
 <nav class="navigationMain navbar sticky-top ">
     <div class="container">
         <ul class="nav">

@@ -15,14 +15,9 @@ $router->get('admin/logout', "Authenticate@logout", true);
 $router->get('admin', "ProductsController@index", true);
 
 $router->get('admin/blog/create', "BlogController@create", true);
-
-$router->get('admin/products', "ProductsController@index", true);
-$router->get('admin/products/create', "ProductsController@create", true);
-$router->post('admin/products', "ProductsController@store", true);
-$router->get('admin/products/show', "ProductsController@show", true);
-$router->get('admin/products/edit', "ProductsController@edit", true);
-$router->post('admin/products/update', "ProductsController@update", true);
-$router->post('admin/products/destroy', "ProductsController@destroy", true);
+$router->post('admin/blog/create', "BlogController@storeBlogPost", true);
+$router->get('admin/blog', "BlogController@allPosts", true);
+$router->get('admin/blog/show/{id}', "BlogController@singlePost", true);
 
 
 

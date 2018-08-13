@@ -13,7 +13,10 @@ class BlogController
 
     public function create()
     {
-        return view('createBlogPost');
+        $categories = App::get('database')->getAll("categories");
+        $users = App::get('database')->getAll("users");
+
+        return view('createBlogPost', compact('categories', 'users'));
     }
 
     public function store()
@@ -58,5 +61,17 @@ class BlogController
             $_POST['image'] = $newName;
             move_uploaded_file($_FILES['image']['tmp_name'], getcwd()."/storage/".$newName);
         }
+    }
+
+    public function storeBlogPost()
+    {
+        App::get('database')->addNewBlogPost('posts', $_POST);
+        return redirect('/admin');
+    }
+
+    public function allPosts()
+    {
+        $posts = App::get('database')->getAll("posts");
+        return view('adminBlog', compact('posts'));
     }
 }

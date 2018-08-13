@@ -29,7 +29,6 @@ class Router
         $route = $this->matchRoute($this->routes[$requestMethod], $uri);
 
         if(!is_null($route)) {
-
             if($route[1]) {
                 if(isset($_SESSION['auth'])){
                     $this->callAction(...explode('@', $route[0]));
@@ -48,7 +47,7 @@ class Router
             }
 
         } else {
-//      require "views/404.view.php";
+            require "views/404.view.php";
         }
     }
 
