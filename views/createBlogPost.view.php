@@ -1,4 +1,4 @@
-<?php require "partials/header.view.php" ?>
+<?php require "views/partials/adminHeader.view.php" ?>
 <form action="/admin/blog/create" method="POST" class="loginForm" enctype="multipart/form-data">
 
     <h3>Create New Blog Post</h3>

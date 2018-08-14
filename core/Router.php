@@ -27,7 +27,6 @@ class Router
 
     public function direct($uri, $requestMethod) {
         $route = $this->matchRoute($this->routes[$requestMethod], $uri);
-
         if(!is_null($route)) {
             if($route[1]) {
                 if(isset($_SESSION['auth'])){

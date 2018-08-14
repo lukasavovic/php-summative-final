@@ -13,7 +13,5 @@
 </head>
 <body>
 <section class="section">
-    <?php require "nav.view.php"; ?>
-
-    <div class="container">
+    <div class="container-fluid page">
 

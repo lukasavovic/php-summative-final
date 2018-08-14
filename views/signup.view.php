@@ -1,4 +1,4 @@
-<?php require "views/partials/header.view.php" ?>
+<?php require "views/partials/adminHeader.view.php" ?>
 <div class="container">
     <form action="/admin/createuser" method="POST"  class="loginForm">
 
