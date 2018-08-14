@@ -1,6 +1,6 @@
 *{
     padding: 0;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
 }
 ::-webkit-scrollbar {
@@ -141,7 +141,7 @@ body{
 }
 .headings h3 {
     color: #ffffff;
-    font-size: 1em;
+    font-size: 0.9em;
     text-transform: uppercase;
 }
 #menu{
@@ -177,10 +177,115 @@ body{
     transform: translateX(-50%) translateY(-50%);
 }
 .blogposts{
-
+    display: grid;
+    grid-template-columns:  1fr;
+    grid-gap: 20px;
+    max-width: 100vw;
+    width: 75%;
+    margin: 20vh auto;
+    text-align: center;
+}
+.main {
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.main h1 {
+    text-align: center;
+    font-size: 5em;
+}
+.main p {
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+.post-card{
+    display: block;
+    max-width: 100%;
+    border-bottom: 1px solid #eaeaea;
+    margin: 50px auto;
+}
+.post-image{
+    max-width: 100%;
+}
+.post-title {
+    font-size: 2.5em;
+    font-family: 'Seaweed Script', cursive;
+    padding: 20px 0;
+}
+.post-text {
+    max-width: 70%;
+    margin: 20px auto 60px;
+    text-align: left;
+}
+.logout{
+    margin-top: 20px;
+    display: inline-block;
+    font-size: 30px;
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    padding: 15px 20px;
+    position: relative;
+}
+.logout:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+.logout:hover:after{
+    width: 100%;
+    left: 0;
+}
+.blocks {
+    width: 60%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    grid-gap: 20px;
+    transform: translate(-50%,-50%);
+}
+.table{
+    margin-top: 10vh;
+}
+.blocks a{
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 1em;
+    color: black;
+    border: 1px solid #eaeaea;
+    transition: 0.1s all ease-in;
+}
+.blocks a:hover {
+    text-decoration: none;
+    color: #4b5868;
+    background-color: #eaeaea;
+    border: 1px solid #4b5868;
 }
 @media (max-width: 750px) {
     .loginForm{
+        width: 100%;
+    }
+    .main p {
+        width: 100%;
+        font-size: 0.6em;
+    }
+    .blocks {
         width: 100%;
     }
 }

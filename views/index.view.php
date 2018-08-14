@@ -13,13 +13,21 @@
             </video>
         </div>
         <div class="blogposts container">
-
+            <?php foreach ($posts as $post):?>
+                <div class="post-card">
+                    <img class="post-image" src="<?= $post->image ?>" alt="Card image cap">
+                    <div class="post-body">
+                        <h5 class="post-title"><?= $post->title ?></h5>
+                        <p class="post-text"><?= $post->text ?></p>
+                    </div>
+                </div>
+            <?php endforeach; ?>
         </div>
     </div>
     <div class="right-nav">
         <ul class="right-nav-items">
             <li><a href="">Home</a></li>
-            <li><a href="#">About Me</a></li>
+            <li><a href="about-us">About Me</a></li>
             <li><a href="admin">Admin Panel</a></li>
         </ul>
     </div>

@@ -13,7 +13,5 @@
 </head>
 <body>
 <section class="section">
-    <?php require "adminNav.view.php"; ?>
-
     <div class="container">
 

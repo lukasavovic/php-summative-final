@@ -1,4 +1,6 @@
 <?php require "views/partials/adminHeader.view.php" ?>
+<a href="/admin" class="logout">Back To Admin</a>
+
 <form action="/admin/blog/create" method="POST" class="loginForm" enctype="multipart/form-data">
 
     <h3>Create New Blog Post</h3>

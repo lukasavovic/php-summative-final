@@ -1,4 +1,6 @@
 <?php require "views/partials/adminHeader.view.php" ?>
+<a href="/admin" class="logout">Back To Admin</a>
+
 <div class="container">
     <form action="/admin/blog/category" method="POST"  class="loginForm">
         <h3>Crate new category</h3>
